@@ -6,9 +6,17 @@
     const $toggles = document.querySelectorAll('.toggle'); // NodeList라는 유사 배열 형태
     const $toggleBtn = document.getElementById('toggle-btn');
 
-    $toggleBtn.addEventListener('click', function() {
+    $toggleBtn.addEventListener('click', () => {
         toggleElements();
     });
+
+    window.addEventListener('resize', () => {
+        if(window.innerWidth > 1024) {
+            // 
+        }
+    })
+
+
 
     function toggleElements() {
         [].forEach.call($toggles, function(toggle) {
