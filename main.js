@@ -12,15 +12,21 @@
 
     window.addEventListener('resize', () => {
         if(window.innerWidth > 1024) {
-            // 
+            offElements();
         }
     })
-
 
 
     function toggleElements() {
         [].forEach.call($toggles, function(toggle) {
             toggle.classList.toggle('on'); // 클래스리스트는 클래스를 제어하는 속성인데 on이라는 클래스 선택자를 토클하겠다.
+        });
+
+    }
+
+    function offElements() {
+        [].forEach.call($toggles, function(toggle) {
+            toggle.classList.remove('on');
         });
 
     }
